@@ -134,7 +134,7 @@ $text-color: #fff;
           position: absolute;
           height: 100%;
           width: 100%;
-          right: 14px;
+          right: 4px;
           transform: rotate(45deg);
 
           span {
@@ -148,7 +148,7 @@ $text-color: #fff;
               width: 4px;
               position: absolute;
               top: 0;
-              right: 12.5px;
+              right: 13px;
               transition-delay: 0s;
             }
 
@@ -186,13 +186,13 @@ $text-color: #fff;
         .cross__menu {
           span {
             &:nth-child(1) {
-              height: 30%;
+              height: 60%;
               transition-delay: 0.225s;
             }
           }
           span {
             &:nth-child(2) {
-              width: 30%;
+              width: 60%;
               transition-delay: 0.075s;
             }
           }
