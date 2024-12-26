@@ -1,0 +1,344 @@
+$primary-color: #f4978e;
+$text-color: #fff;
+
+.hero__outer {
+  background: url('../../assets/cover_mushroom.jpg') center / cover no-repeat;
+}
+
+.navbar__inner {
+  top: 5px;
+  color: $text-color;
+  z-index: 3;
+
+  .navbar__title {
+    animation: fade_right 1s ease-in-out;
+
+    @keyframes fade_right {
+      from {
+        opacity: 0;
+        transform: translateX(-5vw);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  .navbar__list {
+    animation: fade_left 1s ease-in-out;
+
+    @media (max-width: 768px) {
+      li {
+        display: none;
+      }
+    }
+
+    @keyframes fade_left {
+      from {
+        opacity: 0;
+        transform: translateX(5vw);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    li {
+      position: relative;
+      cursor: pointer;
+      margin: 10px;
+      padding-bottom: 2.5px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 95%;
+        height: 3px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $primary-color;
+      }
+    }
+
+    .user__icon {
+      cursor: pointer;
+      margin-top: -1.5px !important;
+
+      @media screen and (max-width: 768px) {
+        margin-right: -50px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .menu__toggle {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        position: relative;
+        cursor: pointer;
+
+        .hamburger__menu {
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          justify-content: center;
+
+          span {
+            display: block;
+            background: $text-color;
+            opacity: 0.75;
+            border-radius: 2px;
+            width: 30px;
+            height: 4px;
+            position: relative;
+            top: 0px;
+            left: 0px;
+            margin: 3px 0;
+
+            &:nth-child(1) {
+              transition-delay: 0.5s;
+            }
+
+            &:nth-child(2) {
+              transition-delay: 0.625s;
+            }
+
+            &:nth-child(3) {
+              transition-delay: 0.75s;
+            }
+          }
+        }
+
+        .cross__menu {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          right: 14px;
+          transform: rotate(45deg);
+
+          span {
+            display: block;
+            background: $text-color;
+            opacity: 0.75;
+            border-radius: 2px;
+
+            &:nth-child(1) {
+              height: 0%;
+              width: 4px;
+              position: absolute;
+              top: 0;
+              right: 12.5px;
+              transition-delay: 0s;
+            }
+
+            &:nth-child(2) {
+              width: 0%;
+              height: 4px;
+              position: absolute;
+              left: 100%;
+              top: 12.5px;
+              transform: translateX(-100%);
+              transition-delay: 0.25s;
+            }
+          }
+        }
+      }
+
+      .menu__toggle.open {
+        .hamburger__menu {
+          span {
+            width: 0px;
+
+            &:nth-child(1) {
+              transition-delay: 0s;
+            }
+
+            &:nth-child(2) {
+              transition-delay: 0.025s;
+            }
+
+            &:nth-child(3) {
+              transition-delay: 0.15s;
+            }
+          }
+        }
+        .cross__menu {
+          span {
+            &:nth-child(1) {
+              height: 30%;
+              transition-delay: 0.225s;
+            }
+          }
+          span {
+            &:nth-child(2) {
+              width: 30%;
+              transition-delay: 0.075s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.hero__inner {
+  position: absolute;
+  inset: 0;
+  padding-top: 65px;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+
+  .hero__content {
+    padding-left: 1.2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% + 10px));
+    color: $text-color;
+
+    @media (max-height: 500px) {
+      top: 0;
+      transform: translate(-50%, 85px);
+    }
+
+    .hero__social {
+      color: $text-color;
+      opacity: 0;
+      animation: fade_down 1s ease-in-out 1s forwards;
+
+      @keyframes fade_down {
+        from {
+          opacity: 0;
+          transform: translateY(-5vh);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .social__icon {
+        cursor: pointer;
+        opacity: 0.5;
+        transition: opacity 0.2s;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    h2,
+    h4 {
+      max-width: 55vw;
+      word-wrap: break-word;
+    }
+
+    h2 {
+      font-size: 4.2rem;
+      opacity: 0;
+      animation: fade_right 1s ease-in-out 1s forwards;
+
+      @media (max-width: 1435px) {
+        font-size: 3.7rem;
+      }
+
+      @media (max-width: 1265px) {
+        font-size: 3.2rem;
+      }
+
+      @media (max-width: 1095px) {
+        font-size: 2.8rem;
+      }
+
+      @keyframes fade_right {
+        from {
+          opacity: 0;
+          transform: translateX(-5vw);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    }
+
+    h4 {
+      font-size: 1.35rem;
+      font-weight: 400;
+      padding-bottom: 1.175rem;
+      line-height: 1.5;
+      opacity: 0;
+      animation: fade_left 1s ease-in-out 1s forwards;
+
+      @media (max-width: 1435px) {
+        font-size: 1.2rem;
+      }
+
+      @keyframes fade_left {
+        from {
+          opacity: 0;
+          transform: translateX(5vw);
+        }
+        to {
+          opacity: 0.8;
+          transform: translateX(0);
+        }
+      }
+    }
+
+    .explore__btn {
+      background-color: $primary-color;
+      color: rgba(255, 255, 255, 0.75);
+      opacity: 0;
+      transition: all 0.2s;
+      cursor: pointer;
+      animation: fade_up 1s ease-in-out 1s forwards;
+
+      &:hover {
+        color: $text-color;
+        opacity: 0.9 !important;
+        transform: translateY(2px) !important;
+      }
+
+      @media (max-width: 1435px) {
+        font-size: 1.4rem !important;
+      }
+
+      @keyframes fade_up {
+        from {
+          opacity: 0;
+          transform: translateY(5vh);
+        }
+        to {
+          opacity: 0.8;
+          transform: translateY(0);
+        }
+      }
+
+      .explore__icon {
+        animation: zoom_in_zoom_out 2s infinite 2s;
+
+        @keyframes zoom_in_zoom_out {
+          0%,
+          100% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+}
