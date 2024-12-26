@@ -14,7 +14,7 @@ function Header() {
 
   return (
     <div className="navbar__outer">
-      <div className="hero__outer vw-100 vh-100">
+      <div className="hero__outer">
         <div className="navbar__inner container d-flex align-items-center justify-content-between position-relative">
           <span className="navbar__title fs-1 fw-bold">Fungi Guard</span>
           <ul className="navbar__list d-flex align-items-center justify-content-between m-0 p-0 list-unstyled">
