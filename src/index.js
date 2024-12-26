@@ -8,5 +8,6 @@ root.render(
   <React.StrictMode>
     <Header />
     <Footer />
+    <div>hello new one</div>
   </React.StrictMode>
 );

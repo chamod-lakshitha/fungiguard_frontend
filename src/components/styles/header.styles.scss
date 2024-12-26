@@ -3,6 +3,12 @@ $text-color: #fff;
 
 .hero__outer {
   background: url('../../assets/cover_mushroom.jpg') center / cover no-repeat;
+  width: 100vw;
+  height: 100svh;
+
+  @media (max-width: 426px) {
+    background-position: 70% 0;
+  }
 }
 
 .navbar__inner {
@@ -12,6 +18,10 @@ $text-color: #fff;
 
   .navbar__title {
     animation: fade_right 1s ease-in-out;
+
+    @media (max-width: 320px) {
+      font-size: 1.3rem !important;
+    }
 
     @keyframes fade_right {
       from {
@@ -72,16 +82,17 @@ $text-color: #fff;
       margin-top: -1.5px !important;
 
       @media screen and (max-width: 768px) {
-        margin-right: -50px;
+        // margin-right: px;
       }
     }
 
     @media screen and (max-width: 768px) {
       .menu__toggle {
-        width: 100px;
-        height: 100px;
+        width: 50px;
+        height: 50px;
         margin: 0 auto;
         position: relative;
+        right: 3px;
         cursor: pointer;
 
         .hamburger__menu {
@@ -206,7 +217,7 @@ $text-color: #fff;
     transform: translate(-50%, calc(-50% + 10px));
     color: $text-color;
 
-    @media (max-height: 500px) {
+    @media (max-height: 450px) {
       top: 0;
       transform: translate(-50%, 85px);
     }
@@ -230,7 +241,24 @@ $text-color: #fff;
       .social__icon {
         cursor: pointer;
         opacity: 0.5;
+        margin-bottom: 7.5px;
         transition: opacity 0.2s;
+
+        @media (max-width: 675px) {
+          font-size: 1.5rem !important;
+        }
+
+        @media (max-width: 465px) {
+          font-size: 1.4rem !important;
+        }
+
+        @media (max-width: 415px) {
+          font-size: 1.3rem !important;
+        }
+
+        @media (max-width: 320px) {
+          font-size: 1.3rem !important;
+        }
 
         &:hover {
           opacity: 1;
@@ -261,6 +289,27 @@ $text-color: #fff;
         font-size: 2.8rem;
       }
 
+      @media (max-width: 675px) {
+        font-size: 2.5rem;
+      }
+
+      @media (max-width: 465px) {
+        font-size: 2.25rem !important;
+      }
+
+      @media (max-width: 426px) {
+        font-size: 2.1rem;
+      }
+
+      @media (max-width: 415px) {
+        font-size: 1.8rem !important;
+      }
+
+      @media (max-width: 320px) {
+        max-width: 65vw;
+        font-size: 1.6rem;
+      }
+
       @keyframes fade_right {
         from {
           opacity: 0;
@@ -283,6 +332,27 @@ $text-color: #fff;
 
       @media (max-width: 1435px) {
         font-size: 1.2rem;
+      }
+
+      @media (max-width: 675px) {
+        font-size: 1rem;
+      }
+
+      @media (max-width: 465px) {
+        font-size: 0.95rem !important;
+      }
+
+      @media (max-width: 426px) {
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 415px) {
+        font-size: 0.8rem !important;
+      }
+
+      @media (max-width: 320px) {
+        max-width: 65vw;
+        font-size: 0.7rem;
       }
 
       @keyframes fade_left {
@@ -313,6 +383,26 @@ $text-color: #fff;
 
       @media (max-width: 1435px) {
         font-size: 1.4rem !important;
+      }
+
+      @media (max-width: 675px) {
+        font-size: 1.25rem !important;
+      }
+
+      @media (max-width: 465px) {
+        font-size: 1.15rem !important;
+      }
+
+      @media (max-width: 426px) {
+        font-size: 1.1rem !important;
+      }
+
+      @media (max-width: 415px) {
+        font-size: 1rem !important;
+      }
+
+      @media (max-width: 320px) {
+        font-size: 0.9rem !important;
       }
 
       @keyframes fade_up {
