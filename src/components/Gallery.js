@@ -2,7 +2,7 @@ import React from 'react';
 
 function Gallery() {
   return (
-    <div className="container mt-5">
+    <div className="container mt-5" style={{ overflow: 'hidden' }}>
       <div className="row row-cols-1 row-cols-md-3 g-3">
         <div className="col" data-aos="fade-right" data-aos-duration="500">
           <div className="card">
