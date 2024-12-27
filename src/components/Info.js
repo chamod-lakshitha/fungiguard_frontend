@@ -10,19 +10,14 @@ function Info() {
         Matters
       </h2>
       <p className="mt-4 pt-1 info__text">
-        Mushroom edibility prediction is essential for ensuring safety and
-        fostering sustainable practices. Mushrooms are a valuable resource, rich
-        in nutrients like vitamins, minerals, and antioxidants, and play a
-        critical role in ecosystems by recycling nutrients. However,
-        distinguishing between edible and poisonous varieties can be
-        challenging, even for experts, as many species appear similar. A
-        mushroom edibility prediction model leverages advanced technology, using
-        image recognition and data analysis to classify mushrooms as edible or
-        poisonous quickly and accurately. This tool is invaluable for farmers,
-        foragers, and mycologists, offering safe harvesting, guiding
-        enthusiasts, and accelerating research. By reducing the risks associated
-        with manual identification, the model promotes safety, sustainability,
-        and efficient utilization of this versatile natural resource.
+        Mushroom edibility prediction ensures safety and supports sustainable
+        practices. Rich in nutrients and vital for ecosystems, mushrooms can be
+        challenging to classify due to similarities between edible and poisonous
+        types. Using image recognition and data analysis, a mushroom edibility
+        prediction model quickly and accurately identifies mushrooms, aiding
+        farmers, foragers, and mycologists. This tool reduces risks, promotes
+        safe harvesting, and enhances research, fostering sustainability and
+        efficient resource use.
       </p>
     </div>
   );

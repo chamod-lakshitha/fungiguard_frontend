@@ -51,6 +51,25 @@ function Header() {
               className={`menu__toggle ${open ? 'open' : ''}`}
               onClick={handleToggle}
             >
+              <div
+                className={`mobile__menu ${
+                  open ? 'menu__open' : 'menu__close'
+                }`}
+                style={{ display: open ? 'flex' : 'none' }}
+              >
+                <span className="mobile__menu__item">
+                  <IoHomeOutline />
+                  &nbsp;&nbsp;&nbsp;Home
+                </span>
+                <span className="mobile__menu__item">
+                  <TbMushroom />
+                  &nbsp;&nbsp;&nbsp;Predict Edibility
+                </span>
+                <span className="mobile__menu__item">
+                  <CiPhone />
+                  &nbsp;&nbsp;&nbsp;Contact Us
+                </span>
+              </div>
               <div className="hamburger__menu">
                 <span></span>
                 <span></span>
