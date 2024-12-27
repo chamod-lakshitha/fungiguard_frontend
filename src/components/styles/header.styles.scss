@@ -3,8 +3,23 @@ $text-color: #000;
 
 .hero__outer {
   position: relative;
+  background: linear-gradient(90deg, #f5e6cc, #ffb6b9, #ffe3d3, #a1c6e7);
+  background-size: 400% 400%;
+  animation: gradientAnimation 8s ease infinite;
   width: 100vw;
   height: 100svh;
+
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 
   @media (max-width: 768px) {
     height: 80svh;
@@ -213,6 +228,10 @@ $text-color: #000;
       margin-top: -1.5px !important;
     }
 
+    .mobile__menu__item {
+      display: none;
+    }
+
     @media screen and (max-width: 768px) {
       .menu__toggle {
         width: 50px;
@@ -221,6 +240,28 @@ $text-color: #000;
         position: relative;
         right: 3px;
         cursor: pointer;
+
+        .mobile__menu {
+          position: absolute;
+          top: 42.5px;
+          right: 5px;
+          width: 165px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          background-color: rgba(255, 255, 255, 0.1);
+
+          span {
+            padding: 15px 10px;
+            width: 100%;
+            font-size: 1rem;
+            font-weight: 400;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+          }
+        }
 
         .hamburger__menu {
           height: 100%;
@@ -244,15 +285,15 @@ $text-color: #000;
             margin: 3px 0;
 
             &:nth-child(1) {
-              transition-delay: 0.5s;
+              transition-delay: 0.25s;
             }
 
             &:nth-child(2) {
-              transition-delay: 0.625s;
+              transition-delay: 0.375s;
             }
 
             &:nth-child(3) {
-              transition-delay: 0.75s;
+              transition-delay: 0.5s;
             }
           }
         }
@@ -306,7 +347,7 @@ $text-color: #000;
             }
 
             &:nth-child(3) {
-              transition-delay: 0.15s;
+              transition-delay: 0.05s;
             }
           }
         }
@@ -314,7 +355,7 @@ $text-color: #000;
           span {
             &:nth-child(1) {
               height: 60%;
-              transition-delay: 0.225s;
+              transition-delay: 0.025s;
             }
           }
           span {
