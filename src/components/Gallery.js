@@ -4,7 +4,7 @@ function Gallery() {
   return (
     <div className="container mt-5">
       <div className="row row-cols-1 row-cols-md-3 g-3">
-        <div className="col" data-aos="fade-right" data-aos-duration="1000">
+        <div className="col" data-aos="fade-right" data-aos-duration="500">
           <div className="card">
             <img
               src={require('../assets/cover_mushroom.jpg')}
@@ -20,7 +20,7 @@ function Gallery() {
             </div>
           </div>
         </div>
-        <div className="col" data-aos="fade-up" data-aos-duration="1000">
+        <div className="col" data-aos="fade-up" data-aos-duration="500">
           <div className="card">
             <img
               src={require('../assets/cover_mushroom.png')}
@@ -36,7 +36,7 @@ function Gallery() {
             </div>
           </div>
         </div>
-        <div className="col" data-aos="fade-left" data-aos-duration="1000">
+        <div className="col" data-aos="fade-left" data-aos-duration="500">
           <div className="card">
             <img
               src={require('../assets/cover_mushroom2.jpg')}
